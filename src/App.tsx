@@ -1,5 +1,12 @@
 import "./App.css";
-import { Backers, Community, Hero, NavBar, Services } from "./components";
+import {
+  Backers,
+  Community,
+  Hero,
+  NavBar,
+  RegisterationBanner,
+  Services,
+} from "./components";
 
 function App() {
   return (
@@ -9,6 +16,7 @@ function App() {
       <Backers />
       <Services />
       <Community />
+      <RegisterationBanner />
     </>
   );
 }

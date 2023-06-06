@@ -127,6 +127,7 @@ export const TitleLarge = styled("p")<{
   fontWeight: "800",
   fontSize: "75px",
   textAlign: textAlign || "center",
+  margin: "0px",
 }));
 
 export const TitleMedium = styled("p")<{
@@ -139,16 +140,20 @@ export const TitleMedium = styled("p")<{
   margin: "0px",
 }));
 
-export const CardTitle = styled("p")(() => ({
-  fontSize: "30px",
-  fontWeight: 800,
-  margin: "0px",
-}));
+export const CardTitle = styled("p")<{ textColor?: string }>(
+  ({ textColor }) => ({
+    fontSize: "30px",
+    fontWeight: 800,
+    margin: "0px",
+    color: textColor || "#0D0D0D",
+  })
+);
 
 export const SubTitle = styled("p")<{
   textAlign?: "start" | "end" | "center";
-}>(({ textAlign }) => ({
-  color: "#0D0D0D",
+  textColor?: string;
+}>(({ textAlign, textColor }) => ({
+  color: textColor || "#0D0D0D",
   fontWeight: "400",
   fontSize: "22px",
   textAlign: textAlign || "center",
@@ -156,11 +161,13 @@ export const SubTitle = styled("p")<{
 }));
 
 export const HeroWrapper = styled("div")(() => ({
-  paddingTop: "30px",
+  paddingTop: "50px",
 }));
 
 export const BackersWrapper = styled("div")(() => ({
-  padding: "50px",
+  // padding: "50px",
+  width: "80%",
+  margin: "auto",
 }));
 
 export const ServicesWrapper = styled("div")(() => ({
@@ -170,38 +177,72 @@ export const ServicesWrapper = styled("div")(() => ({
   border: "2px solid red",
   width: "80%",
   margin: "auto",
+  marginTop: "150px",
+  justifyContent: "center",
 }));
 
 export const ServicesListWrapper = styled("div")(() => ({
   display: "flex",
   flexWrap: "wrap",
-  justifyContent: "flex-start",
+  justifyContent: "center",
+  marginTop: "20px",
 }));
 
 export const CommunityWrapper = styled("div")(() => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "flex-start",
-  border: "2px solid blue",
   width: "80%",
-  margin: "auto",
-  marginTop: "50px",
+  margin: "70px auto",
 }));
 
 export const CommunityListWrapper = styled("div")(() => ({
   display: "flex",
   justifyContent: "space-between",
-  border: "2px solid green",
   width: "80%",
+  marginTop: "30px",
+}));
+
+export const BackersListWrapper = styled("div")(() => ({
+  display: "flex",
+  margin: "auto",
+  justifyContent: "space-between",
+  flexWrap: "wrap",
+}));
+
+export const CardWrapper = styled("div")<{ backgroundColor: string }>(
+  ({ backgroundColor }) => ({
+    width: "500px",
+    margin: "10px",
+    borderRadius: "15px",
+    display: "flex",
+    background: backgroundColor,
+    overflow: "hidden",
+  })
+);
+
+export const RegisterationBannerWrapper = styled("div")(() => ({
+  background: "#121212",
+  position: "relative",
+  height: "1200px",
+  display: "flex",
+  flexDirection: "column",
+  padding: "20px",
 }));
 
 export const CardLeftBox = styled("div")(() => ({
   display: "flex",
   flexDirection: "column",
+  justifyContent: "space-between",
+  padding: "30px 20px",
+
+  height: "220px",
+  margin: "auto",
 }));
 
 export const CardRightBox = styled("div")(() => ({
-  // border:""
+  display: "flex",
+  alignItems: "flex-end",
 }));
 
 export const CommunityBox = styled("div")(() => ({
@@ -213,4 +254,9 @@ export const CommunityBox = styled("div")(() => ({
   height: "150px",
   margin: "10px",
   borderRadius: "10px",
+}));
+
+export const BannerHeader = styled("div")(() => ({
+  display: "flex",
+  alignItems: "center",
 }));

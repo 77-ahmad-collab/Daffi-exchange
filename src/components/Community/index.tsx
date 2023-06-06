@@ -1,4 +1,5 @@
 import React, { useMemo } from "react";
+import { Discord, Medium, Telegram, Twitter } from "../../assets/images";
 import {
   CommunityBox,
   CommunityListWrapper,
@@ -10,10 +11,10 @@ import {
 const Community = () => {
   const CommunityList = useMemo(
     () => [
-      { imageSrc: "", link: "" },
-      { imageSrc: "", link: "" },
-      { imageSrc: "", link: "" },
-      { imageSrc: "", link: "" },
+      { imageSrc: Twitter, link: "" },
+      { imageSrc: Discord, link: "" },
+      { imageSrc: Telegram, link: "" },
+      { imageSrc: Medium, link: "" },
     ],
     []
   );
@@ -23,14 +24,14 @@ const Community = () => {
         Join the <br />
         Community
       </TitleMedium>
-      <SubTitle>
-        Join a fast-growing community of traders and web2 users connected all
-        over the world, building the new era of internet
+      <SubTitle textAlign="start" style={{ marginTop: "15px" }}>
+        Join a fast-growing community of traders and web2 users <br /> connected
+        all over the world, building the new era of internet
       </SubTitle>
       <CommunityListWrapper>
-        {CommunityList.map(({ imageSrc }) => {
+        {CommunityList.map(({ imageSrc }, index) => {
           return (
-            <CommunityBox>
+            <CommunityBox className="cursor" key={index}>
               <img src={imageSrc} width="45px" alt="CommunityLogo" />
             </CommunityBox>
           );

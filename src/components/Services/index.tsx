@@ -1,4 +1,6 @@
-import React, { useMemo } from "react";
+import { useMemo } from "react";
+
+import { Earn, Order, SuperStaking, Wallet } from "../../assets/images";
 import Card from "../Card";
 import {
   ServicesListWrapper,
@@ -15,7 +17,7 @@ const Services = () => {
         secondaryTitle: "No Problem!",
         subTitle:
           "Create your DAFI account and have full custody of your crypto.",
-        imageSrc: "",
+        imageSrc: Wallet,
         link: "",
         backgroundColor: "#0052FE",
       },
@@ -24,7 +26,7 @@ const Services = () => {
         secondaryTitle: "",
         subTitle:
           "Set buy and sell orders for your favorite tokens and trade with ease.",
-        imageSrc: "",
+        imageSrc: Order,
         link: "",
         backgroundColor: "#6A27EA",
       },
@@ -32,7 +34,7 @@ const Services = () => {
         title: "Refer & earn",
         secondaryTitle: "",
         subTitle: "Invite your friends to use DAFI and earn as they trade.",
-        imageSrc: "",
+        imageSrc: Earn,
         link: "",
         backgroundColor: "#FC7A1E",
       },
@@ -41,7 +43,7 @@ const Services = () => {
         secondaryTitle: "",
         subTitle:
           "Stake $DAFI and earn passive rewards from global trading activity.",
-        imageSrc: "",
+        imageSrc: SuperStaking,
         link: "",
         backgroundColor: "#ED217C",
       },

@@ -4,31 +4,34 @@ import {
   CardLeftBox,
   CardRightBox,
   CardTitle,
+  CardWrapper,
   SubTitle,
   SyledButton,
 } from "../styled";
 
-const Card: FC<PROPS> = ({ title, secondaryTitle, subTitle, imageSrc }) => {
+const Card: FC<PROPS> = ({
+  title,
+  secondaryTitle,
+  subTitle,
+  imageSrc,
+  backgroundColor,
+}) => {
   return (
-    <div
-      style={{
-        border: "2px solid red",
-        width: "35%",
-        margin: "10px",
-        borderRadius: "15px",
-        display: "flex",
-      }}
-    >
+    <CardWrapper backgroundColor={backgroundColor}>
       <CardLeftBox>
-        <CardTitle>{title}</CardTitle>
-        <CardTitle>{secondaryTitle}</CardTitle>
-        <SubTitle textAlign="start">{subTitle}</SubTitle>
+        <div>
+          <CardTitle textColor="#fff">{title}</CardTitle>
+          <CardTitle textColor="#fff">{secondaryTitle}</CardTitle>
+        </div>
+        <SubTitle textColor="#fff" textAlign="start">
+          {subTitle}
+        </SubTitle>
         <SyledButton variant="contained"> Get Started</SyledButton>
       </CardLeftBox>
       <CardRightBox>
         <img src={imageSrc} alt="rightBoxImage" />
       </CardRightBox>
-    </div>
+    </CardWrapper>
   );
 };
 
