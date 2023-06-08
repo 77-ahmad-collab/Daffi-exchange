@@ -19,6 +19,15 @@
 .cursor {
   cursor: pointer;
 }
+.rightBoxImage{
+  width:"100%";
+  height: "100%";
+}
+
+#section1 {
+  padding-top: 100px;  /* Replace 100px with the height of your navbar */
+  margin-top: -100px;  /* Replace 100px with the height of your navbar */
+}
 
 @keyframes App-logo-spin {
   from {
@@ -26,5 +35,34 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@media only screen and (max-width: 1200px) {
+   .Illustration{
+  width:100%
+}
+}
+
+@media only screen and (max-width: 600px) {
+  .heroImage{
+    margin-top: 30px;
+  }
+  .rightBoxImage{
+    width:150px;
+    height: 100%;
+  }
+  
+  .backers{
+    margin:10px;
+    width:150px;
+    height:100px
+  }
+}
+
+@media only screen and (max-width: 350px) { 
+  .backers{
+  
+    width:120px
+    /* height:100px */
   }
 }

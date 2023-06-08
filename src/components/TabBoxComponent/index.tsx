@@ -1,15 +1,18 @@
 import React, { FC } from "react";
 import { TabBoxComponentProps as PROPS } from "../../interfaces";
 import { SingleTabText, TabBox } from "../styled";
+// import { HashLink } from "react-router-hash-link";
 
-const TabBoxComponent: FC<PROPS> = ({ tabs }) => {
+const TabBoxComponent: FC<PROPS> = ({ tabs, textColor, isShowColumnWise }) => {
   return (
-    <TabBox>
+    <TabBox isShowColumnWise={isShowColumnWise}>
       {tabs.map((tab, key) => {
         return (
-          <SingleTabText key={key} color="red">
-            {tab.name}
-          </SingleTabText>
+          <a href="#section1">
+            <SingleTabText key={key} textColor={textColor}>
+              {tab.name}
+            </SingleTabText>
+          </a>
         );
       })}
     </TabBox>

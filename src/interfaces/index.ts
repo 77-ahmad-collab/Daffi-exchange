@@ -2,6 +2,8 @@ export type TabBoxComponentProps = {
   tabs: {
     name: string;
   }[];
+  textColor?: string;
+  isShowColumnWise?: boolean;
 };
 
 export type CardProps = {

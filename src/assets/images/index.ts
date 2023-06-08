@@ -15,6 +15,10 @@ import Medium from "./Medium.svg";
 import Twitter from "./Twitter.svg";
 import Telegram from "./Telegram.svg";
 import BottomGradient from "./BottomGradient.svg";
+import Plus from "./Plus.svg";
+import Dafi from "./Dafi.svg";
+import BuyDafi from "./BuyDafi.svg";
+import SignUp from "./SignUp.svg";
 
 export {
   HeroImage,
@@ -34,4 +38,8 @@ export {
   Twitter,
   Telegram,
   BottomGradient,
+  Plus,
+  Dafi,
+  BuyDafi,
+  SignUp,
 };

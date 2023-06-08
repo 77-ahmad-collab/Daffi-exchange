@@ -63,7 +63,7 @@ const Navbar = () => {
           <SyledButton variant="contained" style={{ margin: "10px 15px" }}>
             Log In
           </SyledButton>
-          <TabBoxComponent tabs={tabs} />
+          <TabBoxComponent tabs={tabs} isShowColumnWise={true} />
         </MobileTabBox>
       </Container>
     </StyledNavBar>

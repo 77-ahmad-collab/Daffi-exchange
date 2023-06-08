@@ -8,6 +8,7 @@ import {
   Spark,
 } from "../../assets/images";
 import { BackersListWrapper, BackersWrapper, TitleMedium } from "../styled";
+import { isMobile } from "react-device-detect";
 
 const Backers = () => {
   const BackersList = useMemo(
@@ -41,7 +42,9 @@ const Backers = () => {
   );
   return (
     <BackersWrapper>
-      <TitleMedium textAlign="start">Backers</TitleMedium>
+      <TitleMedium textAlign={isMobile ? "center" : "start"}>
+        Backers
+      </TitleMedium>
       <BackersListWrapper>
         {BackersList.map((backer, key) => {
           return (
@@ -49,9 +52,9 @@ const Backers = () => {
               key={key}
               src={backer.image}
               alt="bakerImage"
-              width={150}
-              height={150}
-              className="cursor"
+              // width={150}
+              // height={150}
+              className="cursor backers"
             />
           );
         })}

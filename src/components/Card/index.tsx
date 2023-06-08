@@ -29,7 +29,7 @@ const Card: FC<PROPS> = ({
         <SyledButton variant="contained"> Get Started</SyledButton>
       </CardLeftBox>
       <CardRightBox>
-        <img src={imageSrc} alt="rightBoxImage" />
+        <img src={imageSrc} alt="rightBoxImage" className="rightBoxImage" />
       </CardRightBox>
     </CardWrapper>
   );
