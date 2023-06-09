@@ -41,7 +41,7 @@ const Backers = () => {
     []
   );
   return (
-    <BackersWrapper>
+    <BackersWrapper id="backers">
       <TitleMedium textAlign={isMobile ? "center" : "start"}>
         Backers
       </TitleMedium>

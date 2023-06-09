@@ -12,17 +12,26 @@ import {
   TogglerBox,
 } from "../styled";
 import TabBoxComponent from "../TabBoxComponent";
+import { Dlogo } from "../../assets/images";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
 
+  const onToggle = () => setToggle(!toggle);
+
   const tabs = useMemo(
     () => [
-      { name: "Backers" },
+      { name: "Backers", section: "backers", onClick: () => setToggle(false) },
       {
         name: "About",
+        section: "about",
+        onClick: () => setToggle(false),
       },
-      { name: "Community" },
+      {
+        name: "Community",
+        section: "community",
+        onClick: () => setToggle(false),
+      },
     ],
     []
   );
@@ -35,9 +44,9 @@ const Navbar = () => {
             height: "100%",
           }}
         >
-          <LogoImage src={""} alt="Name Logo" width={40} height={40} />
+          <LogoImage src={Dlogo} alt="Name Logo" width={40} height={40} />
           <LogoTitle variant="h1" noWrap>
-            Stashed
+            Dafi
           </LogoTitle>
           <Box
             sx={{
@@ -51,7 +60,7 @@ const Navbar = () => {
 
             <SyledButton variant="contained"> Log In</SyledButton>
           </Box>
-          <TogglerBox onClick={() => setToggle(!toggle)}>
+          <TogglerBox onClick={onToggle}>
             {toggle ? (
               <CloseIcon className="greenColor" />
             ) : (

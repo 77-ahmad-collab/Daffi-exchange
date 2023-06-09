@@ -2,16 +2,39 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+
+
+
+
+@font-face {
+  font-family: "SFProBold";
+  src: url("./assets/fonts/SF-Pro-Display/SF-Pro-Display-Bold.ttf") format("truetype");
+  font-weight: bolder;
+  font-style: normal;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+
+@font-face {
+  font-family: "SFProLight";
+  src: url("./assets/fonts/SF-Pro-Display/SF-Pro-Display-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }
+
+@font-face {
+  font-family: "SFProMedium";
+  src: url("./assets/fonts/SF-Pro-Display/SF-Pro-Display-Medium.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "SFProRegular";
+  src: url("./assets/fonts/SF-Pro-Display/SF-Pro-Display-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
 
 .heroImage {
   margin-top: 30px;
@@ -24,9 +47,18 @@
   height: "100%";
 }
 
-#section1 {
+#backers {
   padding-top: 100px;  /* Replace 100px with the height of your navbar */
   margin-top: -100px;  /* Replace 100px with the height of your navbar */
+}
+#about{
+  padding-top: 100px;  /* Replace 100px with the height of your navbar */
+  margin-top: 100px;  /* Replace 100px with the height of your navbar */
+}
+#community
+{
+  padding-top: 70px;  /* Replace 100px with the height of your navbar */
+  margin-top: 70px;  /* Replace 100px with the height of your navbar */
 }
 
 @keyframes App-logo-spin {
@@ -38,17 +70,28 @@
   }
 }
 @media only screen and (max-width: 1200px) {
-   .Illustration{
-  width:100%
+  .Illustration{
+    width:100%
+  }
+  .rightBoxImage{
+    width:175px;
+    height:220px
+  }
 }
+@media only screen and (max-width: 860px) {
+  .rightBoxImage{
+    width:150px;
+    height:220px
+  }
 }
+
 
 @media only screen and (max-width: 600px) {
   .heroImage{
     margin-top: 30px;
   }
   .rightBoxImage{
-    width:150px;
+    width:200px;
     height: 100%;
   }
   
@@ -56,6 +99,12 @@
     margin:10px;
     width:150px;
     height:100px
+  }
+}
+@media only screen and (max-width: 405px) {
+  .rightBoxImage{
+    width:150px;
+    height:250px
   }
 }
 

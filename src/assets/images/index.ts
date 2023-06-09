@@ -19,6 +19,9 @@ import Plus from "./Plus.svg";
 import Dafi from "./Dafi.svg";
 import BuyDafi from "./BuyDafi.svg";
 import SignUp from "./SignUp.svg";
+import Dlogo from "./dLogo.svg";
+import Arrow from "./Arrow.svg";
+import DaffiLogo from "./DaffiLogo.svg";
 
 export {
   HeroImage,
@@ -42,4 +45,7 @@ export {
   Dafi,
   BuyDafi,
   SignUp,
+  Dlogo,
+  Arrow,
+  DaffiLogo,
 };

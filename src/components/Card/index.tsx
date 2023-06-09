@@ -15,6 +15,7 @@ const Card: FC<PROPS> = ({
   subTitle,
   imageSrc,
   backgroundColor,
+  bottom,
 }) => {
   return (
     <CardWrapper backgroundColor={backgroundColor}>
@@ -28,7 +29,7 @@ const Card: FC<PROPS> = ({
         </SubTitle>
         <SyledButton variant="contained"> Get Started</SyledButton>
       </CardLeftBox>
-      <CardRightBox>
+      <CardRightBox bottom={bottom}>
         <img src={imageSrc} alt="rightBoxImage" className="rightBoxImage" />
       </CardRightBox>
     </CardWrapper>

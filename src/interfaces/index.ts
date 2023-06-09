@@ -1,6 +1,8 @@
 export type TabBoxComponentProps = {
   tabs: {
     name: string;
+    section: string;
+    onClick?: () => void;
   }[];
   textColor?: string;
   isShowColumnWise?: boolean;
@@ -13,4 +15,5 @@ export type CardProps = {
   imageSrc: string;
   link: string;
   backgroundColor: string;
+  bottom: number;
 };

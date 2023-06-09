@@ -3,6 +3,7 @@ import { isMobile } from "react-device-detect";
 import {
   BottomGradient,
   BuyDafi,
+  DaffiLogo,
   Dafi,
   Illustration,
   Plus,
@@ -23,12 +24,13 @@ import TabBoxComponent from "../TabBoxComponent";
 const RegisterationBanner = () => {
   const tabs = useMemo(
     () => [
-      { name: "Backers" },
+      { name: "Backers", section: "backers" },
       {
         name: "About",
+        section: "about",
       },
-      { name: "Community" },
-      { name: "Docs" },
+      { name: "Community", section: "about" },
+      { name: "Docs", section: "" },
     ],
     []
   );
@@ -75,13 +77,7 @@ const RegisterationBanner = () => {
       </BorderBoxParent>
 
       <FooterLogoWrapper>
-        <SubTitle
-          textColor="#fff"
-          textAlign="start"
-          style={{ marginLeft: "18px" }}
-        >
-          dafi
-        </SubTitle>
+        <img src={DaffiLogo} alt="daffiLogo" />
         <TabBoxComponent
           tabs={tabs}
           textColor="#ffffff"

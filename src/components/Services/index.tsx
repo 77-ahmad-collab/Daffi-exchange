@@ -20,6 +20,7 @@ const Services = () => {
         imageSrc: Wallet,
         link: "",
         backgroundColor: "#0052FE",
+        bottom: 0,
       },
       {
         title: "Order up!",
@@ -29,6 +30,7 @@ const Services = () => {
         imageSrc: Order,
         link: "",
         backgroundColor: "#6A27EA",
+        bottom: 10,
       },
       {
         title: "Refer & earn",
@@ -37,6 +39,7 @@ const Services = () => {
         imageSrc: Earn,
         link: "",
         backgroundColor: "#FC7A1E",
+        bottom: 20,
       },
       {
         title: "Super Staking",
@@ -46,13 +49,14 @@ const Services = () => {
         imageSrc: SuperStaking,
         link: "",
         backgroundColor: "#ED217C",
+        bottom: 0,
       },
     ],
     []
   );
 
   return (
-    <ServicesWrapper>
+    <ServicesWrapper id="about">
       <TitleMedium textAlign="center">
         The Best
         <br />
@@ -65,22 +69,28 @@ const Services = () => {
 
       <ServicesListWrapper>
         {ServiceList.map(
-          ({
-            title,
-            imageSrc,
-            link,
-            backgroundColor,
-            secondaryTitle,
-            subTitle,
-          }) => {
+          (
+            {
+              title,
+              imageSrc,
+              link,
+              backgroundColor,
+              secondaryTitle,
+              subTitle,
+              bottom,
+            },
+            index
+          ) => {
             return (
               <Card
+                key={index}
                 title={title}
                 backgroundColor={backgroundColor}
                 link={link}
                 imageSrc={imageSrc}
                 secondaryTitle={secondaryTitle}
                 subTitle={subTitle}
+                bottom={bottom}
               />
             );
           }

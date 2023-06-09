@@ -12,13 +12,13 @@ export const LogoTitle = styled(Typography)<{
   fontFamily?: string;
 }>(({ theme, color, fontFamily }) => ({
   color: color || "#0D0D0D",
-  fontWeight: "800",
+  fontWeight: "bolder",
   fontSize: "32px",
   lineHeight: "32px",
   textDecoration: "none",
   marginLeft: "5px",
   letterSpacing: "-0.02em",
-  fontFamily: fontFamily || "PPNeueMachinaBold",
+  fontFamily: fontFamily || "SFProBold",
   paddingTop: "5px",
   [theme.breakpoints.down("sm")]: {
     display: "flex",
@@ -32,7 +32,7 @@ export const LogoTitle = styled(Typography)<{
 export const MobileTabBox = styled("div", {
   shouldForwardProp: (prop) => prop !== "toggle",
 })<{ toggle: boolean }>(({ theme, toggle }) => ({
-  height: toggle ? "350px" : "0px",
+  height: toggle ? "220px" : "0px",
 
   width: "100%",
   left: "0px",
@@ -74,6 +74,7 @@ export const SyledButton = styled(Button)(() => ({
   borderRadius: "55px",
   padding: "10px 25px",
   maxWidth: "140px",
+  fontFamily: "SFProRegular",
   ":hover": {
     background: "#111119",
     boxShadow: "none",
@@ -104,7 +105,7 @@ export const SingleTabText = styled("p")<{
   letterSpacing: "-0.02em",
   margin: "1rem 2rem",
   cursor: "pointer",
-  fontFamily: "SFPROREGULAR",
+  fontFamily: "SFProRegular",
   [theme.breakpoints.down("md")]: {
     margin: "1rem 1rem",
   },
@@ -133,6 +134,7 @@ export const TitleLarge = styled("p")<{
   fontSize: "75px",
   textAlign: textAlign || "center",
   margin: "0px",
+  fontFamily: "SFProBold",
   [theme.breakpoints.down(600)]: {
     fontSize: "45px",
   },
@@ -157,6 +159,7 @@ export const TitleMedium = styled("p")<{
   fontSize: "55px",
   textAlign: textAlign || "center",
   margin: "0px",
+  fontFamily: "SFProBold",
 }));
 
 export const CardTitle = styled("p")<{ textColor?: string }>(
@@ -165,6 +168,7 @@ export const CardTitle = styled("p")<{ textColor?: string }>(
     fontWeight: 800,
     margin: "0px",
     color: textColor || "#0D0D0D",
+    fontFamily: "SFProBold",
     [theme.breakpoints.down(600)]: {
       fontSize: "25px",
     },
@@ -174,12 +178,16 @@ export const CardTitle = styled("p")<{ textColor?: string }>(
 export const SubTitle = styled("p")<{
   textAlign?: "start" | "end" | "center";
   textColor?: string;
-}>(({ textAlign, textColor }) => ({
+}>(({ textAlign, textColor, theme }) => ({
   color: textColor || "#0D0D0D",
   fontWeight: "400",
   fontSize: "22px",
   textAlign: textAlign || "center",
   margin: "0px",
+  fontFamily: "SFProRegular",
+  [theme.breakpoints.down(1200)]: {
+    fontSize: "18px",
+  },
 }));
 
 export const HeroWrapper = styled("div")(({ theme }) => ({
@@ -190,11 +198,10 @@ export const HeroWrapper = styled("div")(({ theme }) => ({
 }));
 
 export const BackersWrapper = styled("div")(({ theme }) => ({
-  // padding: "50px",
   width: "80%",
   margin: "auto",
   [theme.breakpoints.down(600)]: {
-    width: "100%",
+    width: "95%",
   },
 }));
 
@@ -202,13 +209,16 @@ export const ServicesWrapper = styled("div")(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
-  border: "2px solid red",
   width: "80%",
   margin: "auto",
   marginTop: "150px",
   justifyContent: "center",
+  [theme.breakpoints.down(1200)]: {
+    width: "99%",
+  },
+
   [theme.breakpoints.down(600)]: {
-    width: "100%",
+    width: "95%",
     marginTop: "100px",
   },
 }));
@@ -226,6 +236,9 @@ export const CommunityWrapper = styled("div")(({ theme }) => ({
   alignItems: "flex-start",
   width: "80%",
   margin: "70px auto",
+  [theme.breakpoints.down(772)]: {
+    width: "90%",
+  },
   [theme.breakpoints.down(600)]: {
     width: "100%",
     alignItems: "center",
@@ -252,7 +265,7 @@ export const BackersListWrapper = styled("div")(({ theme }) => ({
   flexWrap: "wrap",
   [theme.breakpoints.down(600)]: {
     justifyContent: "center",
-    border: "2px solid red",
+
     width: "100%",
   },
 }));
@@ -260,12 +273,34 @@ export const BackersListWrapper = styled("div")(({ theme }) => ({
 export const CardWrapper = styled("div")<{ backgroundColor: string }>(
   ({ theme, backgroundColor }) => ({
     width: "500px",
+
     margin: "10px",
     borderRadius: "15px",
     display: "flex",
     background: backgroundColor,
     overflow: "hidden",
-
+    position: "relative",
+    justifyContent: "flex-start",
+    [theme.breakpoints.down(1200)]: {
+      width: "400px",
+      height: "300px",
+    },
+    [theme.breakpoints.down(860)]: {
+      width: "350px",
+      height: "300px",
+    },
+    [theme.breakpoints.down(740)]: {
+      width: "320px",
+      height: "300px",
+    },
+    [theme.breakpoints.down(690)]: {
+      width: "300px",
+      height: "300px",
+    },
+    [theme.breakpoints.down(690)]: {
+      width: "295px",
+      height: "300px",
+    },
     [theme.breakpoints.down(600)]: {
       width: "100%",
       // height: "400px",
@@ -304,20 +339,37 @@ export const CardLeftBox = styled("div")(({ theme }) => ({
   flexDirection: "column",
   justifyContent: "space-between",
   padding: "30px 20px",
-
   height: "220px",
-  margin: "auto",
+  width: "280px",
+  [theme.breakpoints.down(1200)]: { width: "240px" },
+  [theme.breakpoints.down(860)]: {
+    width: "220px",
+    height: "250px",
+  },
+  [theme.breakpoints.down(740)]: {
+    width: "200px",
+    height: "225px",
+    padding: "30px 10px",
+  },
+  [theme.breakpoints.down(690)]: {
+    width: "180px",
+    height: "275px",
+    padding: "10px 10px",
+  },
   [theme.breakpoints.down(600)]: {
     height: "80%",
     padding: "20px 10px",
-
+    width: "50%",
     margin: "0px",
   },
 }));
 
-export const CardRightBox = styled("div")(() => ({
+export const CardRightBox = styled("div")<{ bottom: number }>(({ bottom }) => ({
   display: "flex",
   alignItems: "flex-end",
+  position: "absolute",
+  bottom: bottom,
+  right: -10,
 }));
 
 export const CommunityBox = styled("div")(({ theme }) => ({
@@ -338,6 +390,10 @@ export const CommunityBox = styled("div")(({ theme }) => ({
   [theme.breakpoints.down(400)]: {
     width: "150px",
   },
+}));
+
+export const StyledLink = styled("a")(() => ({
+  textDecoration: "none",
 }));
 
 export const BannerHeader = styled("div")(({ theme }) => ({

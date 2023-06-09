@@ -22,7 +22,7 @@ const Community = () => {
   );
 
   return (
-    <CommunityWrapper id="section1">
+    <CommunityWrapper id="community">
       <TitleMedium textAlign={isMobile ? "center" : "start"}>
         Join the <DesktopBr /> Community
       </TitleMedium>

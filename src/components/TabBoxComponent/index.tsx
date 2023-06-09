@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { TabBoxComponentProps as PROPS } from "../../interfaces";
-import { SingleTabText, TabBox } from "../styled";
+import { SingleTabText, StyledLink, TabBox } from "../styled";
 // import { HashLink } from "react-router-hash-link";
 
 const TabBoxComponent: FC<PROPS> = ({ tabs, textColor, isShowColumnWise }) => {
@@ -8,11 +8,18 @@ const TabBoxComponent: FC<PROPS> = ({ tabs, textColor, isShowColumnWise }) => {
     <TabBox isShowColumnWise={isShowColumnWise}>
       {tabs.map((tab, key) => {
         return (
-          <a href="#section1">
-            <SingleTabText key={key} textColor={textColor}>
+          <StyledLink href={`#${tab.section}`}>
+            <SingleTabText
+              key={key}
+              textColor={textColor}
+              onClick={() => {
+                console.log(tab.onClick);
+                if (tab.onClick) tab.onClick();
+              }}
+            >
               {tab.name}
             </SingleTabText>
-          </a>
+          </StyledLink>
         );
       })}
     </TabBox>

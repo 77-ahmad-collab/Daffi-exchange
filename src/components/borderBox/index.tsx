@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Plus, SignUp } from "../../assets/images";
+import { Arrow } from "../../assets/images";
 import { BorderBoxFooter, BorderBoxWrapper, SubTitle } from "../styled";
 
 const BorderBox: FC<{
@@ -9,7 +9,13 @@ const BorderBox: FC<{
 }> = ({ mainLogo, secondaryLogo, text }) => {
   return (
     <BorderBoxWrapper>
-      <img src="" alt="arrow" width={45} height={45} />
+      <img
+        src={Arrow}
+        alt="arrow"
+        width={35}
+        height={35}
+        style={{ alignSelf: "flex-end" }}
+      />
       <img src={mainLogo} alt="logo" width={100} height={100} />
       <BorderBoxFooter>
         <img src={secondaryLogo} alt="BuyorSignup" width={150} height={150} />
