@@ -109,6 +109,9 @@ export const SingleTabText = styled("p")<{
   [theme.breakpoints.down("md")]: {
     margin: "1rem 1rem",
   },
+  [theme.breakpoints.down(600)]: {
+    margin: "10px",
+  },
 }));
 
 export const TabBox = styled(Box)<{ isShowColumnWise?: boolean }>(
@@ -138,6 +141,9 @@ export const TitleLarge = styled("p")<{
   [theme.breakpoints.down(600)]: {
     fontSize: "45px",
   },
+  [theme.breakpoints.down(350)]: {
+    fontSize: "35px",
+  },
 }));
 
 export const MobileBr = styled("br")(({ theme }) => ({
@@ -153,13 +159,16 @@ export const DesktopBr = styled("br")(({ theme }) => ({
 }));
 export const TitleMedium = styled("p")<{
   textAlign?: "start" | "end" | "center";
-}>(({ textAlign }) => ({
+}>(({ textAlign, theme }) => ({
   color: "#0D0D0D",
   fontWeight: "800",
   fontSize: "55px",
   textAlign: textAlign || "center",
   margin: "0px",
   fontFamily: "SFProBold",
+  [theme.breakpoints.down(762)]: {
+    fontSize: "35px",
+  },
 }));
 
 export const CardTitle = styled("p")<{ textColor?: string }>(
@@ -187,6 +196,21 @@ export const SubTitle = styled("p")<{
   fontFamily: "SFProRegular",
   [theme.breakpoints.down(1200)]: {
     fontSize: "18px",
+  },
+}));
+
+export const SubTitleSmall = styled("p")<{
+  textAlign?: "start" | "end" | "center";
+  textColor?: string;
+}>(({ textAlign, textColor, theme }) => ({
+  color: textColor || "#0D0D0D",
+  fontWeight: "400",
+  fontSize: "18px",
+  textAlign: textAlign || "center",
+  margin: "0px",
+  fontFamily: "SFProRegular",
+  [theme.breakpoints.down(1200)]: {
+    fontSize: "15px",
   },
 }));
 
@@ -263,16 +287,17 @@ export const BackersListWrapper = styled("div")(({ theme }) => ({
   margin: "auto",
   justifyContent: "space-between",
   flexWrap: "wrap",
+  marginTop: "60px",
   [theme.breakpoints.down(600)]: {
     justifyContent: "center",
-
+    marginTop: "30px",
     width: "100%",
   },
 }));
 
 export const CardWrapper = styled("div")<{ backgroundColor: string }>(
   ({ theme, backgroundColor }) => ({
-    width: "500px",
+    width: "550px",
 
     margin: "10px",
     borderRadius: "15px",
@@ -281,6 +306,7 @@ export const CardWrapper = styled("div")<{ backgroundColor: string }>(
     overflow: "hidden",
     position: "relative",
     justifyContent: "flex-start",
+    height: "320px",
     [theme.breakpoints.down(1200)]: {
       width: "400px",
       height: "300px",
@@ -303,18 +329,24 @@ export const CardWrapper = styled("div")<{ backgroundColor: string }>(
     },
     [theme.breakpoints.down(600)]: {
       width: "100%",
+      margin: "0px",
+
+      marginBottom: "10px",
       // height: "400px",
     },
   })
 );
 
-export const RegisterationBannerWrapper = styled("div")(() => ({
+export const RegisterationBannerWrapper = styled("div")(({ theme }) => ({
   background: "#121212",
   position: "relative",
   // height: "1400px",
   display: "flex",
   flexDirection: "column",
   padding: "20px",
+  [theme.breakpoints.down(600)]: {
+    padding: "5px",
+  },
 }));
 
 export const FooterLogoWrapper = styled("div")(({ theme }) => ({
@@ -339,7 +371,7 @@ export const CardLeftBox = styled("div")(({ theme }) => ({
   flexDirection: "column",
   justifyContent: "space-between",
   padding: "30px 20px",
-  height: "220px",
+  // height: "200px",
   width: "280px",
   [theme.breakpoints.down(1200)]: { width: "240px" },
   [theme.breakpoints.down(860)]: {
@@ -359,18 +391,24 @@ export const CardLeftBox = styled("div")(({ theme }) => ({
   [theme.breakpoints.down(600)]: {
     height: "80%",
     padding: "20px 10px",
-    width: "50%",
+    width: "60%",
     margin: "0px",
   },
 }));
 
-export const CardRightBox = styled("div")<{ bottom: number }>(({ bottom }) => ({
-  display: "flex",
-  alignItems: "flex-end",
-  position: "absolute",
-  bottom: bottom,
-  right: -10,
-}));
+export const CardRightBox = styled("div")<{ bottom: number; right: number }>(
+  ({ bottom, right, theme }) => ({
+    display: "flex",
+    alignItems: "flex-end",
+    position: "absolute",
+    bottom,
+    right,
+    [theme.breakpoints.down(500)]: {
+      bottom: 0,
+      right: 0,
+    },
+  })
+);
 
 export const CommunityBox = styled("div")(({ theme }) => ({
   display: "flex",
@@ -390,6 +428,9 @@ export const CommunityBox = styled("div")(({ theme }) => ({
   [theme.breakpoints.down(400)]: {
     width: "150px",
   },
+  [theme.breakpoints.down(350)]: {
+    width: "140px",
+  },
 }));
 
 export const StyledLink = styled("a")(() => ({
@@ -401,6 +442,11 @@ export const BannerHeader = styled("div")(({ theme }) => ({
   alignItems: "center",
   [theme.breakpoints.down(1200)]: {
     flexDirection: "column",
+  },
+  [theme.breakpoints.down(600)]: {
+    flexDirection: "column-reverse",
+    // padding: "20px",
+    marginTop: "40px",
   },
 }));
 
@@ -414,7 +460,10 @@ export const BorderBoxWrapper = styled("div")(({ theme }) => ({
   borderRadius: "10px",
   margin: "10px",
   [theme.breakpoints.down(600)]: {
-    width: "80%",
+    width: "100%",
+    margin: "0px",
+    marginBottom: "10px",
+    padding: "5px 10px",
   },
 }));
 

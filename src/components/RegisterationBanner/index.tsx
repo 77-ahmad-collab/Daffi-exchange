@@ -1,4 +1,5 @@
-import { useMemo } from "react";
+import axios from "axios";
+import { useEffect, useMemo, useState } from "react";
 import { isMobile } from "react-device-detect";
 import {
   BottomGradient,
@@ -22,6 +23,7 @@ import {
 import TabBoxComponent from "../TabBoxComponent";
 
 const RegisterationBanner = () => {
+  const [price, setPrice] = useState(0);
   const tabs = useMemo(
     () => [
       { name: "Backers", section: "backers" },
@@ -34,6 +36,17 @@ const RegisterationBanner = () => {
     ],
     []
   );
+
+  useEffect(() => {
+    (async () => {
+      const coingeckoId = "dafi-protocol";
+      const result = await axios.get(
+        `https://api.coingecko.com/api/v3/simple/price?ids=${coingeckoId}&vs_currencies=usd`
+      );
+      const price = result.data[coingeckoId].usd;
+      setPrice(price);
+    })();
+  }, []);
   return (
     <RegisterationBannerWrapper>
       <BannerHeader>
@@ -73,7 +86,11 @@ const RegisterationBanner = () => {
       </BannerHeader>
       <BorderBoxParent>
         <BorderBox mainLogo={Plus} secondaryLogo={SignUp} text="78,928 users" />
-        <BorderBox mainLogo={Dafi} secondaryLogo={BuyDafi} text="$0.008105" />
+        <BorderBox
+          mainLogo={Dafi}
+          secondaryLogo={BuyDafi}
+          text={`$${price.toFixed(5)}`}
+        />
       </BorderBoxParent>
 
       <FooterLogoWrapper>

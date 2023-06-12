@@ -11,12 +11,12 @@ const renderApp = () =>
     </React.StrictMode>
   );
 
-const checkPassword = prompt("Enter password");
-if (checkPassword === "website_dev") {
-  renderApp();
-} else {
-  alert("wrong password!");
-}
+// const checkPassword = prompt("Enter password");
+// if (checkPassword === "website_dev") {
+renderApp();
+// } else {
+// alert("wrong password!");
+// }
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))

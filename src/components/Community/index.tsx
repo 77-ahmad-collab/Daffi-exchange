@@ -13,10 +13,10 @@ import {
 const Community = () => {
   const CommunityList = useMemo(
     () => [
-      { imageSrc: Twitter, link: "" },
-      { imageSrc: Discord, link: "" },
-      { imageSrc: Telegram, link: "" },
-      { imageSrc: Medium, link: "" },
+      { imageSrc: Twitter, link: "https://twitter.com/dafiprotocol" },
+      { imageSrc: Discord, link: "https://discord.com/invite/bwpCueVD8t" },
+      { imageSrc: Telegram, link: "https://t.me/dafiprotocol" },
+      { imageSrc: Medium, link: "https://dafiprotocol.medium.com/" },
     ],
     []
   );
@@ -28,15 +28,19 @@ const Community = () => {
       </TitleMedium>
       <SubTitle
         textAlign={isMobile ? "center" : "start"}
-        style={{ marginTop: "15px" }}
+        style={{ marginTop: "40px" }}
       >
         Join a fast-growing community of traders and web2 users <DesktopBr />{" "}
         connected all over the world, building the new era of internet
       </SubTitle>
       <CommunityListWrapper>
-        {CommunityList.map(({ imageSrc }, index) => {
+        {CommunityList.map(({ imageSrc, link }, index) => {
           return (
-            <CommunityBox className="cursor" key={index}>
+            <CommunityBox
+              className="cursor"
+              key={index}
+              onClick={() => window.open(link)}
+            >
               <img src={imageSrc} width="45px" alt="CommunityLogo" />
             </CommunityBox>
           );

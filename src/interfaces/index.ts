@@ -16,4 +16,5 @@ export type CardProps = {
   link: string;
   backgroundColor: string;
   bottom: number;
+  right: number;
 };

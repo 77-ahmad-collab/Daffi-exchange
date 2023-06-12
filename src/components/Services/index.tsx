@@ -14,16 +14,17 @@ const Services = () => {
     () => [
       {
         title: "NO WALLET?",
-        secondaryTitle: "No Problem!",
+        secondaryTitle: "NO PROBLEM!",
         subTitle:
           "Create your DAFI account and have full custody of your crypto.",
         imageSrc: Wallet,
         link: "",
         backgroundColor: "#0052FE",
         bottom: 0,
+        right: 0,
       },
       {
-        title: "Order up!",
+        title: "ORDER UP!",
         secondaryTitle: "",
         subTitle:
           "Set buy and sell orders for your favorite tokens and trade with ease.",
@@ -31,18 +32,20 @@ const Services = () => {
         link: "",
         backgroundColor: "#6A27EA",
         bottom: 10,
+        right: 0,
       },
       {
-        title: "Refer & earn",
+        title: "REFER & EARN",
         secondaryTitle: "",
         subTitle: "Invite your friends to use DAFI and earn as they trade.",
         imageSrc: Earn,
         link: "",
         backgroundColor: "#FC7A1E",
         bottom: 20,
+        right: 20,
       },
       {
-        title: "Super Staking",
+        title: "SUPER STAKING",
         secondaryTitle: "",
         subTitle:
           "Stake $DAFI and earn passive rewards from global trading activity.",
@@ -50,6 +53,7 @@ const Services = () => {
         link: "",
         backgroundColor: "#ED217C",
         bottom: 0,
+        right: 0,
       },
     ],
     []
@@ -78,6 +82,7 @@ const Services = () => {
               secondaryTitle,
               subTitle,
               bottom,
+              right,
             },
             index
           ) => {
@@ -91,6 +96,7 @@ const Services = () => {
                 secondaryTitle={secondaryTitle}
                 subTitle={subTitle}
                 bottom={bottom}
+                right={right}
               />
             );
           }

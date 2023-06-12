@@ -12,14 +12,27 @@ const BorderBox: FC<{
       <img
         src={Arrow}
         alt="arrow"
-        width={35}
-        height={35}
+        // width={35}
+        // height={35}
+        className="arrow"
         style={{ alignSelf: "flex-end" }}
       />
-      <img src={mainLogo} alt="logo" width={100} height={100} />
+      <img
+        src={mainLogo}
+        alt="logo"
+        width={100}
+        height={100}
+        className="registerMainLogo"
+      />
       <BorderBoxFooter>
-        <img src={secondaryLogo} alt="BuyorSignup" width={150} height={150} />
-        <SubTitle textColor="#fff" style={{ opacity: 0.9 }}>
+        <img
+          src={secondaryLogo}
+          alt="BuyorSignup"
+          width={150}
+          height={150}
+          className="registerSecondaryLogo"
+        />
+        <SubTitle textColor="#fff" style={{ opacity: 0.6 }}>
           {text}
         </SubTitle>
       </BorderBoxFooter>

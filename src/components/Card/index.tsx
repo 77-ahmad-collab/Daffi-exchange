@@ -5,7 +5,7 @@ import {
   CardRightBox,
   CardTitle,
   CardWrapper,
-  SubTitle,
+  SubTitleSmall,
   SyledButton,
 } from "../styled";
 
@@ -16,6 +16,7 @@ const Card: FC<PROPS> = ({
   imageSrc,
   backgroundColor,
   bottom,
+  right,
 }) => {
   return (
     <CardWrapper backgroundColor={backgroundColor}>
@@ -24,12 +25,15 @@ const Card: FC<PROPS> = ({
           <CardTitle textColor="#fff">{title}</CardTitle>
           <CardTitle textColor="#fff">{secondaryTitle}</CardTitle>
         </div>
-        <SubTitle textColor="#fff" textAlign="start">
+        <SubTitleSmall textColor="#fff" textAlign="start">
           {subTitle}
-        </SubTitle>
-        <SyledButton variant="contained"> Get Started</SyledButton>
+        </SubTitleSmall>
+        <SyledButton variant="contained" style={{ marginTop: "40px" }}>
+          {" "}
+          Get Started
+        </SyledButton>
       </CardLeftBox>
-      <CardRightBox bottom={bottom}>
+      <CardRightBox bottom={bottom} right={right}>
         <img src={imageSrc} alt="rightBoxImage" className="rightBoxImage" />
       </CardRightBox>
     </CardWrapper>

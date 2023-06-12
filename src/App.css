@@ -8,7 +8,7 @@
 
 @font-face {
   font-family: "SFProBold";
-  src: url("./assets/fonts/SF-Pro-Display/SF-Pro-Display-Bold.ttf") format("truetype");
+  src: url("./assets/fonts/SF-Pro-Display/SF-Pro-Display-Black.ttf") format("truetype");
   font-weight: bolder;
   font-style: normal;
 }
@@ -53,7 +53,7 @@
 }
 #about{
   padding-top: 100px;  /* Replace 100px with the height of your navbar */
-  margin-top: 100px;  /* Replace 100px with the height of your navbar */
+  margin-top: 0px;  /* Replace 100px with the height of your navbar */
 }
 #community
 {
@@ -61,6 +61,19 @@
   margin-top: 70px;  /* Replace 100px with the height of your navbar */
 }
 
+.arrow{
+  width: 35px;
+  height: 35px;
+}
+.registerMainLogo{
+  width: 100px;
+ height: 100px; 
+}
+.registerSecondaryLogo{
+  width: 150px;
+  height: 150px; 
+
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -96,9 +109,22 @@
   }
   
   .backers{
-    margin:10px;
-    width:150px;
+    margin:22px;
+    width:120px;
     height:100px
+  }
+  .arrow{
+    width: 25px;
+    height: 25px;
+  }
+  .registerMainLogo{
+    width: 70px;
+   height: 70px; 
+  }
+  .registerSecondaryLogo{
+    width: 100px;
+    height: 100px; 
+  
   }
 }
 @media only screen and (max-width: 405px) {
@@ -111,7 +137,8 @@
 @media only screen and (max-width: 350px) { 
   .backers{
   
-    width:120px
+    width:100px;
+    margin: 25px;
     /* height:100px */
   }
 }
