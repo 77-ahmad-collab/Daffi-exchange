@@ -66,7 +66,7 @@ const Services = () => {
         <br />
         of Both Worlds
       </TitleMedium>
-      <SubTitle>
+      <SubTitle style={{ marginTop: "40px" }}>
         The DAFI Hybrid Exchange combines CEX user experience with DEX security
         and self custody.
       </SubTitle>

@@ -204,10 +204,11 @@ export const DesktopBr = styled("br")(({ theme }) => ({
 }));
 export const TitleMedium = styled("p")<{
   textAlign?: "start" | "end" | "center";
-}>(({ textAlign, theme }) => ({
+  fontSize?: number;
+}>(({ textAlign, theme, fontSize }) => ({
   color: "#0D0D0D",
   fontWeight: "800",
-  fontSize: "55px",
+  fontSize: `${fontSize || 55}px`,
   textAlign: textAlign || "center",
   margin: "0px",
   fontFamily: "SFProBold",
@@ -418,8 +419,12 @@ export const CardLeftBox = styled("div")(({ theme }) => ({
   padding: "30px 20px",
   // height: "200px",
   width: "280px",
+  marginLeft: "20px",
+
+  height: "75%",
   [theme.breakpoints.down(1200)]: { width: "240px" },
   [theme.breakpoints.down(860)]: {
+    marginLeft: "0px",
     width: "220px",
     height: "250px",
   },

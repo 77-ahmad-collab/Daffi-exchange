@@ -24,7 +24,12 @@ const Navbar = () => {
   const openModal = () => setIsModalOpen(true);
 
   const closeModal = () => setIsModalOpen(false);
-
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth", // for smooth scrolling
+    });
+  };
   const tabs = useMemo(
     () => [
       { name: "Backers", section: "backers", onClick: () => setToggle(false) },
@@ -50,10 +55,16 @@ const Navbar = () => {
             height: "100%",
           }}
         >
-          <LogoImage src={Dlogo} alt="Name Logo" width={40} height={40} />
-          <LogoTitle variant="h1" noWrap>
-            Dafi
-          </LogoTitle>
+          <div
+            className="cursor"
+            onClick={scrollToTop}
+            style={{ display: "flex" }}
+          >
+            <LogoImage src={Dlogo} alt="Name Logo" width={40} height={40} />
+            <LogoTitle variant="h1" noWrap>
+              Dafi
+            </LogoTitle>
+          </div>
           <Box
             sx={{
               display: { xs: "none", sm: "flex" },

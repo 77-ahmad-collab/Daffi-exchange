@@ -23,7 +23,7 @@ const Community = () => {
 
   return (
     <CommunityWrapper id="community">
-      <TitleMedium textAlign={isMobile ? "center" : "start"}>
+      <TitleMedium textAlign={isMobile ? "center" : "start"} fontSize={65}>
         Join the <DesktopBr /> Community
       </TitleMedium>
       <SubTitle

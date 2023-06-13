@@ -22,13 +22,16 @@ const Card: FC<PROPS> = ({
     <CardWrapper backgroundColor={backgroundColor}>
       <CardLeftBox>
         <div>
-          <CardTitle textColor="#fff">{title}</CardTitle>
+          <CardTitle textColor="#fff" style={{ marginTop: "15px" }}>
+            {" "}
+            {title}
+          </CardTitle>
           <CardTitle textColor="#fff">{secondaryTitle}</CardTitle>
         </div>
         <SubTitleSmall textColor="#fff" textAlign="start">
           {subTitle}
         </SubTitleSmall>
-        <SyledButton variant="contained" style={{ marginTop: "40px" }}>
+        <SyledButton variant="contained" style={{ marginTop: "20px" }}>
           {" "}
           Get Started
         </SyledButton>
