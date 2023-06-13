@@ -94,7 +94,7 @@ const RegisterationBanner = () => {
       </BorderBoxParent>
 
       <FooterLogoWrapper>
-        <img src={DaffiLogo} alt="daffiLogo" />
+        <img src={DaffiLogo} alt="daffiLogo" className="daffiLogo" />
         <TabBoxComponent
           tabs={tabs}
           textColor="#ffffff"
@@ -112,6 +112,7 @@ const RegisterationBanner = () => {
         src={BottomGradient}
         alt="bottomGradient"
         width={"100%"}
+        className="bottomGradient"
         style={{
           position: "absolute",
           bottom: "0px",

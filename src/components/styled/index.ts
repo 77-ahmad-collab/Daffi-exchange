@@ -311,6 +311,7 @@ export const CommunityWrapper = styled("div")(({ theme }) => ({
   },
   [theme.breakpoints.down(600)]: {
     width: "100%",
+
     alignItems: "center",
   },
 }));
@@ -410,6 +411,8 @@ export const FooterLogoWrapper = styled("div")(({ theme }) => ({
     flexDirection: "column",
     alignItems: "flex-start",
     width: "100%",
+    marginTop: "50px",
+    marginLeft: "20px",
   },
 }));
 export const CardLeftBox = styled("div")(({ theme }) => ({
@@ -510,7 +513,7 @@ export const BorderBoxWrapper = styled(motion.div)(({ theme }) => ({
   borderRadius: "10px",
   margin: "10px",
   [theme.breakpoints.down(600)]: {
-    width: "100%",
+    width: "80%",
     margin: "0px",
     marginBottom: "10px",
     padding: "5px 10px",
@@ -523,6 +526,7 @@ export const IllustrationLogoWrapper = styled("div")(({ theme }) => ({
   marginLeft: "50px",
   [theme.breakpoints.down(600)]: {
     marginLeft: "0px",
+    marginTop: "30px",
   },
 }));
 export const BorderBoxParent = styled("div")(() => ({

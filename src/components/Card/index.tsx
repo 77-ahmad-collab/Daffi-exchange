@@ -17,6 +17,7 @@ const Card: FC<PROPS> = ({
   backgroundColor,
   bottom,
   right,
+  handleClick,
 }) => {
   return (
     <CardWrapper backgroundColor={backgroundColor}>
@@ -31,7 +32,11 @@ const Card: FC<PROPS> = ({
         <SubTitleSmall textColor="#fff" textAlign="start">
           {subTitle}
         </SubTitleSmall>
-        <SyledButton variant="contained" style={{ marginTop: "20px" }}>
+        <SyledButton
+          variant="contained"
+          style={{ marginTop: "20px" }}
+          onClick={handleClick}
+        >
           {" "}
           Get Started
         </SyledButton>

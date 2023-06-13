@@ -7,13 +7,7 @@ const Hero = () => {
       <TitleLarge>
         Trade <MobileBr /> Without Limits
       </TitleLarge>
-      <img
-        src={HeroImage}
-        alt="hero"
-        width={"100%"}
-        // height={"50px"}
-        className="heroImage"
-      />
+      <img src={HeroImage} alt="hero" width={"100%"} className="heroImage" />
     </HeroWrapper>
   );
 };

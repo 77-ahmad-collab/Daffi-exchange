@@ -1,4 +1,5 @@
-import { useMemo } from "react";
+import { useMemo, useState } from "react";
+import { RegisterationModal } from "..";
 
 import { Earn, Order, SuperStaking, Wallet } from "../../assets/images";
 import Card from "../Card";
@@ -10,6 +11,7 @@ import {
 } from "../styled";
 
 const Services = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const ServiceList = useMemo(
     () => [
       {
@@ -58,7 +60,9 @@ const Services = () => {
     ],
     []
   );
+  // const openModal = () => setIsModalOpen(true);
 
+  const closeModal = () => setIsModalOpen(false);
   return (
     <ServicesWrapper id="about">
       <TitleMedium textAlign="center">
@@ -97,11 +101,13 @@ const Services = () => {
                 subTitle={subTitle}
                 bottom={bottom}
                 right={right}
+                handleClick={() => window.open("https://trade.dafi.io/")}
               />
             );
           }
         )}
       </ServicesListWrapper>
+      <RegisterationModal isModalOpen={isModalOpen} closeModal={closeModal} />
     </ServicesWrapper>
   );
 };

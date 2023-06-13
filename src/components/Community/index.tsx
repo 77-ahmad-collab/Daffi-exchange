@@ -23,12 +23,12 @@ const Community = () => {
 
   return (
     <CommunityWrapper id="community">
-      <TitleMedium textAlign={isMobile ? "center" : "start"} fontSize={65}>
+      <TitleMedium textAlign={isMobile ? "center" : "start"} fontSize={90}>
         Join the <DesktopBr /> Community
       </TitleMedium>
       <SubTitle
-        textAlign={isMobile ? "center" : "start"}
-        style={{ marginTop: "40px" }}
+        textAlign={isMobile ? "start" : "start"}
+        style={{ width: "80%", margin: "auto", marginTop: "40px" }}
       >
         Join a fast-growing community of traders and web2 users <DesktopBr />{" "}
         connected all over the world, building the new era of internet

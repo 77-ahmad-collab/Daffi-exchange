@@ -1,7 +1,13 @@
 import { motion } from "framer-motion";
 import { FC } from "react";
 import { Arrow } from "../../assets/images";
-import { BorderBoxFooter, BorderBoxWrapper, SubTitle } from "../styled";
+import {
+  BorderBoxFooter,
+  BorderBoxWrapper,
+  Heading,
+  RegisterationModalWrapper,
+  SubTitle,
+} from "../styled";
 
 const BorderBox: FC<{
   mainLogo: string;
@@ -21,13 +27,22 @@ const BorderBox: FC<{
       variants={variants}
     >
       <motion.div className="overlay">
-        <p style={{ border: "2px solid red", color: "#fff", zIndex: 2000 }}>
-          Overlay content
-        </p>
+        <div style={{ color: "#fff", zIndex: 2000 }}>
+          <RegisterationModalWrapper>
+            <Heading
+              style={{ padding: "0px", margin: "0px", lineHeight: "60px" }}
+              fontSize="45px"
+            >
+              Coming Soon...
+            </Heading>
+          </RegisterationModalWrapper>
+        </div>
       </motion.div>
       <img
         src={Arrow}
         alt="arrow"
+        // width={35}
+        // height={35}
         className="arrow"
         style={{ alignSelf: "flex-end" }}
       />

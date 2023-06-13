@@ -58,7 +58,7 @@ const Navbar = () => {
           <div
             className="cursor"
             onClick={scrollToTop}
-            style={{ display: "flex" }}
+            style={{ display: "flex", alignItems: "center" }}
           >
             <LogoImage src={Dlogo} alt="Name Logo" width={40} height={40} />
             <LogoTitle variant="h1" noWrap>

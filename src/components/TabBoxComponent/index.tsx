@@ -19,8 +19,7 @@ const TabBoxComponent: FC<PROPS> = ({ tabs, textColor, isShowColumnWise }) => {
                 setTabIndex(key);
               }}
               style={{
-                textDecoration: key === tabIndex ? "underline" : "none",
-                fontWeight: key === tabIndex ? "bold" : "normal",
+                fontWeight: key === tabIndex && !textColor ? "bold" : "normal",
               }}
             >
               {tab.name}

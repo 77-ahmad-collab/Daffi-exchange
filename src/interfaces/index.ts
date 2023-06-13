@@ -17,6 +17,7 @@ export type CardProps = {
   backgroundColor: string;
   bottom: number;
   right: number;
+  handleClick: () => void;
 };
 export type BasicModalProps = {
   open: boolean;
