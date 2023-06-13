@@ -69,11 +69,102 @@
   width: 100px;
  height: 100px; 
 }
+.content-box {
+  position: relative;
+  /* Your other styles... */
+}
+
+.content-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0); /* Transparent background */
+  transition: backdrop-filter 0.2s ease;
+  pointer-events: none;
+  backdrop-filter: none; /* No filter initially */
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  pointer-events: none;
+  opacity: 0 !important;
+  transition: opacity 0.2s ease;
+
+}
+
+.content-box:hover .overlay {
+  opacity: 1 !important;
+
+} 
+
+.content-box:hover::after {
+  backdrop-filter: blur(13px); /* Apply blur filter on hover */
+  border-radius: 10px;
+}
+
 .registerSecondaryLogo{
   width: 150px;
   height: 150px; 
+  margin-top: -10px;
 
 }
+
+/* .content-box {
+  position: relative;
+
+}
+
+.content-box::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0);
+  transition: background 0.3s ease;
+  pointer-events: none;
+}
+.overlay {
+  position: absolute;
+  top: 100;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  pointer-events: none;
+  opacity: 0 !important;
+  transition: opacity 0.3s ease;
+}
+
+.content-box:hover .overlay {
+  opacity: 1 !important;
+} 
+
+.content-box:hover::after {
+  background: rgba(0, 0, 0, 0.7);
+} */
+
+/* .content-box:hover {
+  filter: blur(5px);
+} */
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

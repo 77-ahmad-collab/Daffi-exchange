@@ -18,3 +18,13 @@ export type CardProps = {
   bottom: number;
   right: number;
 };
+export type BasicModalProps = {
+  open: boolean;
+  onClose: () => void;
+  children: React.ReactElement;
+};
+
+export type RegisterationModalProps = {
+  isModalOpen: boolean;
+  closeModal: () => void;
+};

@@ -5,6 +5,8 @@ import NavBar from "./NavBar";
 import Services from "./Services";
 import RegisterationBanner from "./RegisterationBanner";
 import BorderBox from "./borderBox";
+import BasicModal from "./BasicModal";
+import RegisterationModal from "./RegisterationModal";
 
 export {
   NavBar,
@@ -14,4 +16,6 @@ export {
   Community,
   RegisterationBanner,
   BorderBox,
+  BasicModal,
+  RegisterationModal,
 };

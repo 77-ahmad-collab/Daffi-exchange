@@ -15,27 +15,27 @@ const Backers = () => {
     () => [
       {
         image: RareStone,
-        link: "",
+        link: "https://rarestone.capital/",
       },
       {
         image: Spark,
-        link: "",
+        link: "https://sparkdigitalcapital.com/",
       },
       {
         image: Capital,
-        link: "",
+        link: "https://au21.capital/",
       },
       {
         image: MorningStar,
-        link: "",
+        link: "https://morningstar.ventures/",
       },
       {
         image: LD,
-        link: "",
+        link: "https://ldcap.com/",
       },
       {
         image: SL2,
-        link: "",
+        link: "https://sl2.capital/",
       },
     ],
     []
@@ -55,6 +55,7 @@ const Backers = () => {
               // width={150}
               // height={150}
               className="cursor backers"
+              onClick={() => window.open(backer.link)}
             />
           );
         })}

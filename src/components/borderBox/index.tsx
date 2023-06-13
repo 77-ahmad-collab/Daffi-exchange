@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { FC } from "react";
 import { Arrow } from "../../assets/images";
 import { BorderBoxFooter, BorderBoxWrapper, SubTitle } from "../styled";
@@ -7,13 +8,26 @@ const BorderBox: FC<{
   secondaryLogo: string;
   text: string;
 }> = ({ mainLogo, secondaryLogo, text }) => {
+  const variants = {
+    initial: { scale: 1 },
+    animate: { scale: 1 },
+  };
+
   return (
-    <BorderBoxWrapper>
+    <BorderBoxWrapper
+      className="content-box"
+      initial="initial"
+      whileHover="animate"
+      variants={variants}
+    >
+      <motion.div className="overlay">
+        <p style={{ border: "2px solid red", color: "#fff", zIndex: 2000 }}>
+          Overlay content
+        </p>
+      </motion.div>
       <img
         src={Arrow}
         alt="arrow"
-        // width={35}
-        // height={35}
         className="arrow"
         style={{ alignSelf: "flex-end" }}
       />

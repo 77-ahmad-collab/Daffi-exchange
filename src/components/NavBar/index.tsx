@@ -13,11 +13,17 @@ import {
 } from "../styled";
 import TabBoxComponent from "../TabBoxComponent";
 import { Dlogo } from "../../assets/images";
+import { RegisterationModal } from "..";
 
 const Navbar = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false);
   const [toggle, setToggle] = useState(false);
 
   const onToggle = () => setToggle(!toggle);
+
+  const openModal = () => setIsModalOpen(true);
+
+  const closeModal = () => setIsModalOpen(false);
 
   const tabs = useMemo(
     () => [
@@ -58,7 +64,10 @@ const Navbar = () => {
           >
             <TabBoxComponent tabs={tabs} />
 
-            <SyledButton variant="contained"> Log In</SyledButton>
+            <SyledButton variant="contained" onClick={openModal}>
+              {" "}
+              Log In
+            </SyledButton>
           </Box>
           <TogglerBox onClick={onToggle}>
             {toggle ? (
@@ -69,12 +78,17 @@ const Navbar = () => {
           </TogglerBox>
         </Toolbar>
         <MobileTabBox toggle={toggle}>
-          <SyledButton variant="contained" style={{ margin: "10px 15px" }}>
+          <SyledButton
+            variant="contained"
+            style={{ margin: "10px 15px" }}
+            onClick={openModal}
+          >
             Log In
           </SyledButton>
           <TabBoxComponent tabs={tabs} isShowColumnWise={true} />
         </MobileTabBox>
       </Container>
+      <RegisterationModal isModalOpen={isModalOpen} closeModal={closeModal} />
     </StyledNavBar>
   );
 };

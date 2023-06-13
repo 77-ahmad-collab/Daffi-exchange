@@ -1,4 +1,6 @@
 import { AppBar, Box, Button, styled, Typography } from "@mui/material";
+import { motion } from "framer-motion";
+import CloseIcon from "@mui/icons-material/Close";
 
 export const LogoImage = styled("img")(({ theme }) => ({
   [theme.breakpoints.down("sm")]: {
@@ -6,7 +8,28 @@ export const LogoImage = styled("img")(({ theme }) => ({
     height: 30,
   },
 }));
+export const Heading = styled("p")<{ fontSize?: string }>(
+  ({ theme, fontSize }) => ({
+    fontSize: fontSize || "55px",
+    fontWeight: 860,
+    fontFamily: "SFPROBOLD",
+    lineHeight: "86px",
 
+    padding: "0px 80px",
+    margin: "10px",
+    color: "#000",
+    [theme.breakpoints.down("lg")]: {
+      padding: "0px 50px",
+    },
+    [theme.breakpoints.down("md")]: {
+      padding: "0px 30px",
+    },
+    [theme.breakpoints.down("sm")]: {
+      margin: "0px",
+      fontSize: "40px",
+    },
+  })
+);
 export const LogoTitle = styled(Typography)<{
   color?: string;
   fontFamily?: string;
@@ -113,7 +136,29 @@ export const SingleTabText = styled("p")<{
     margin: "10px",
   },
 }));
+export const StyledCloseIcon = styled(CloseIcon)(({ theme }) => ({
+  position: "absolute",
+  top: "25px",
+  right: "10px",
+  cursor: "pointer",
+  [theme.breakpoints.down(420)]: {
+    top: "15px",
+  },
+}));
 
+export const RegisterationModalWrapper = styled("div")(({ theme }) => ({
+  width: "350px",
+  background: "#fff",
+  padding: "25px",
+  borderRadius: "12px",
+  border: "none",
+  position: "relative",
+  [theme.breakpoints.down(420)]: {
+    width: "85vw",
+    margin: "auto",
+    padding: "15px",
+  },
+}));
 export const TabBox = styled(Box)<{ isShowColumnWise?: boolean }>(
   ({ theme, isShowColumnWise }) => ({
     display: "flex",
@@ -450,13 +495,13 @@ export const BannerHeader = styled("div")(({ theme }) => ({
   },
 }));
 
-export const BorderBoxWrapper = styled("div")(({ theme }) => ({
+export const BorderBoxWrapper = styled(motion.div)(({ theme }) => ({
   border: "2px solid #B2B2B2 ",
   padding: "15px 30px",
   width: "40%",
   display: "flex",
   flexDirection: "column",
-
+  zIndex: 1000,
   borderRadius: "10px",
   margin: "10px",
   [theme.breakpoints.down(600)]: {
@@ -467,10 +512,13 @@ export const BorderBoxWrapper = styled("div")(({ theme }) => ({
   },
 }));
 
-export const IllustrationLogoWrapper = styled("div")(() => ({
+export const IllustrationLogoWrapper = styled("div")(({ theme }) => ({
   display: "flex",
   flexDirection: "column",
   marginLeft: "50px",
+  [theme.breakpoints.down(600)]: {
+    marginLeft: "0px",
+  },
 }));
 export const BorderBoxParent = styled("div")(() => ({
   display: "flex",
