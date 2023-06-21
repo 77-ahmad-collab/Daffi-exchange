@@ -31,7 +31,7 @@ const RegisterationBanner = () => {
         name: "About",
         section: "about",
       },
-      { name: "Community", section: "about" },
+      { name: "Community", section: "community" },
       { name: "Docs", section: "" },
     ],
     []
@@ -85,11 +85,17 @@ const RegisterationBanner = () => {
         </IllustrationLogoWrapper>
       </BannerHeader>
       <BorderBoxParent>
-        <BorderBox mainLogo={Plus} secondaryLogo={SignUp} text="78,928 users" />
+        <BorderBox
+          mainLogo={Plus}
+          secondaryLogo={SignUp}
+          text="78,928 users"
+          box1={true}
+        />
         <BorderBox
           mainLogo={Dafi}
           secondaryLogo={BuyDafi}
           text={`$${price.toFixed(5)}`}
+          box1={false}
         />
       </BorderBoxParent>
 

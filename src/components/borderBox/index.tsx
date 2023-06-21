@@ -13,7 +13,8 @@ const BorderBox: FC<{
   mainLogo: string;
   secondaryLogo: string;
   text: string;
-}> = ({ mainLogo, secondaryLogo, text }) => {
+  box1: boolean;
+}> = ({ mainLogo, secondaryLogo, text, box1 }) => {
   const variants = {
     initial: { scale: 1 },
     animate: { scale: 1 },
@@ -21,10 +22,10 @@ const BorderBox: FC<{
 
   return (
     <BorderBoxWrapper
-      className="content-box"
-      initial="initial"
-      whileHover="animate"
-      variants={variants}
+    // className="content-box"
+    // initial="initial"
+    // whileHover="animate"
+    // variants={variants}
     >
       <motion.div className="overlay">
         <div style={{ color: "#fff", zIndex: 2000 }}>
@@ -46,20 +47,22 @@ const BorderBox: FC<{
         className="arrow"
         style={{ alignSelf: "flex-end" }}
       />
-      <img
-        src={mainLogo}
-        alt="logo"
-        width={100}
-        height={100}
-        className="registerMainLogo"
-      />
+      <div style={{ height: "130px" }}>
+        <img
+          src={mainLogo}
+          alt="logo"
+          width={100}
+          // height={100}
+          className={box1 ? "registerMainLogo1" : "registerMainLogo2"}
+        />
+      </div>
       <BorderBoxFooter>
         <img
           src={secondaryLogo}
           alt="BuyorSignup"
           width={150}
-          height={150}
-          className="registerSecondaryLogo"
+          // height={150}
+          className={box1 ? "registerSecondaryLogo1" : "registerSecondaryLogo2"}
         />
         <SubTitle textColor="#fff" style={{ opacity: 0.6 }}>
           {text}

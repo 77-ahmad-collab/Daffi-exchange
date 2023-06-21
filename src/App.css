@@ -67,9 +67,19 @@
   margin-right: 5px;
   margin-top: 5px;
 }
-.registerMainLogo{
-  width: 100px;
- height: 100px; 
+.registerMainLogo1{
+  height: 80px;
+  width: 80px;
+  /* width: 100px; */
+  /* border: 2px solid yellow; */
+ /* height: 100px;  */
+}
+.registerMainLogo2{
+  width: 60px;
+  height: 78px;
+  /* width: 100px; */
+  /* border: 2px solid yellow; */
+ /* height: 100px;  */
 }
 .content-box {
   position: relative;
@@ -104,6 +114,7 @@
   opacity: 0 !important;
   transition: opacity 0s ease;
 
+
 }
 
 .content-box:hover .overlay {
@@ -116,13 +127,26 @@
   border-radius: 10px;
 }
 
-.registerSecondaryLogo{
+.registerSecondaryLogo1{
   width: 150px;
-  height: 150px; 
+  /* border: 2px solid red; */
+  /* height: 150px;  */
+  margin-top: -10px;
+
+}
+.registerSecondaryLogo2{
+  width: 150px;
+  /* border: 2px solid red; */
+  /* height: 150px;  */
   margin-top: -10px;
 
 }
 
+
+.backers{
+  width:150px;
+  margin: 5px;
+}
 /* .content-box {
   position: relative;
 
@@ -204,19 +228,28 @@
   .backers{
     margin:22px;
     width:120px;
-    height:100px
+    /* height:100px */
   }
   .arrow{
     width: 20px;
     height: 20px;
   }
-  .registerMainLogo{
+  .registerMainLogo1{
     width: 70px;
    height: 70px; 
   }
-  .registerSecondaryLogo{
+  .registerMainLogo2{
+    width: 60px;
+   height: 78px; 
+  }
+  .registerSecondaryLogo1{
     width: 100px;
-    height: 100px; 
+    /* height: 100px;  */
+  
+  }
+  .registerSecondaryLogo2{
+    width: 100px;
+    /* height: 100px;  */
   
   }
   .daffiLogo{
@@ -224,7 +257,13 @@
   }
  
 }
-@media only screen and (max-width: 405px) {
+@media only screen and (max-width: 450px) {
+  .rightBoxImage{
+    width:180px;
+    height:250px
+  }
+}
+@media only screen and (max-width: 430px) {
   .rightBoxImage{
     width:150px;
     height:250px

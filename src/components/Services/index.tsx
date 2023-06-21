@@ -60,7 +60,7 @@ const Services = () => {
     ],
     []
   );
-  // const openModal = () => setIsModalOpen(true);
+  const openModal = () => setIsModalOpen(true);
 
   const closeModal = () => setIsModalOpen(false);
   return (
@@ -101,7 +101,7 @@ const Services = () => {
                 subTitle={subTitle}
                 bottom={bottom}
                 right={right}
-                handleClick={() => window.open("https://trade.dafi.io/")}
+                handleClick={openModal}
               />
             );
           }

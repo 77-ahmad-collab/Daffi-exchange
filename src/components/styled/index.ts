@@ -26,7 +26,7 @@ export const Heading = styled("p")<{ fontSize?: string }>(
     },
     [theme.breakpoints.down("sm")]: {
       margin: "0px",
-      fontSize: "40px",
+      fontSize: "30px",
     },
   })
 );
@@ -153,8 +153,11 @@ export const RegisterationModalWrapper = styled("div")(({ theme }) => ({
   borderRadius: "12px",
   border: "none",
   position: "relative",
+  [theme.breakpoints.down(600)]: {
+    width: "75vw",
+  },
   [theme.breakpoints.down(420)]: {
-    width: "85vw",
+    width: "70vw",
     margin: "auto",
     padding: "15px",
   },
@@ -436,6 +439,11 @@ export const CardLeftBox = styled("div")(({ theme }) => ({
     height: "225px",
     padding: "30px 10px",
   },
+  [theme.breakpoints.down(720)]: {
+    width: "200px",
+    // height: "225px",
+    // padding: "30px 10px",
+  },
   [theme.breakpoints.down(690)]: {
     width: "180px",
     height: "275px",
@@ -539,4 +547,5 @@ export const BorderBoxFooter = styled("div")(() => ({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
+  height: "45px",
 }));

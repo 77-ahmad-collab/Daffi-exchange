@@ -28,7 +28,11 @@ const Community = () => {
       </TitleMedium>
       <SubTitle
         textAlign={isMobile ? "start" : "start"}
-        style={{ width: "80%", margin: "auto", marginTop: "40px" }}
+        style={{
+          width: "80%",
+          margin: isMobile ? "auto" : "none",
+          marginTop: "40px",
+        }}
       >
         Join a fast-growing community of traders and web2 users <DesktopBr />{" "}
         connected all over the world, building the new era of internet
